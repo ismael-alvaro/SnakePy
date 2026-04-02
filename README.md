@@ -2,7 +2,7 @@
 
 PT-BR | [EN](#EN)
 
-SnakePy é um jogo 2D desenvolvido em Python com Pygame, inspirado no clássico Snake. O projeto combina movimentação, colisão, coleta de itens e um elemento de risco representado pela bomba, criando uma experiência simples, rápida e divertida para portfólio.
+SnakePy é um jogo 2D desenvolvido em Python com Pygame, inspirado no clássico Snake. O projeto combina movimentação, colisão, coleta de itens e um elemento de risco representado pela bomba, criando uma experiência simples, rápida e divertida.
 
 ## Destaques
 
