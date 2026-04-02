@@ -50,19 +50,23 @@ def desenhar_pontuacao(pontuacao):
     tela.blit(texto, [10, 10])
 
 # função selecionar velocidade:
-def selecionar_velocidade(tecla):
+def selecionar_velocidade(tecla, velocidade_x, velocidade_y):
     if tecla == pygame.K_DOWN:
-        velocidade_x = 0
-        velocidade_y = tamanho_quadrado
+        if velocidade_y != -tamanho_quadrado: #impedir que a cobra se movimente para o lado contrário daquele para o qual ela está andando
+            velocidade_x = 0
+            velocidade_y = tamanho_quadrado
     elif tecla == pygame.K_UP:
-        velocidade_x = 0
-        velocidade_y = -tamanho_quadrado
+        if velocidade_y != tamanho_quadrado:
+            velocidade_x = 0
+            velocidade_y = -tamanho_quadrado
     elif tecla == pygame.K_RIGHT:
-        velocidade_x = tamanho_quadrado
-        velocidade_y = 0
+        if velocidade_x != -tamanho_quadrado:
+            velocidade_x = tamanho_quadrado
+            velocidade_y = 0
     elif tecla == pygame.K_LEFT:
-        velocidade_x = -tamanho_quadrado
-        velocidade_y = 0
+        if velocidade_x != tamanho_quadrado:
+            velocidade_x = -tamanho_quadrado
+            velocidade_y = 0
     return velocidade_x, velocidade_y
 
 # função para exibir tela de fim de jogo:
@@ -115,7 +119,7 @@ def rodar_jogo():
                 fim_jogo = True
 
             elif evento.type == pygame.KEYDOWN:
-                velocidade_x, velocidade_y = selecionar_velocidade(evento.key)
+                velocidade_x, velocidade_y = selecionar_velocidade(evento.key, velocidade_x, velocidade_y)
 
         # atualizar posição da cobra:
         x += velocidade_x
