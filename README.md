@@ -53,7 +53,7 @@ Use as setas do teclado para mover a cobra:
 
 # EN
 
-SnakePy is a 2D Python game built with Pygame, inspired by the classic Snake formula. It combines movement, collision, item collection, and a hazard element represented by the bomb, making it a lightweight and portfolio-friendly project.
+SnakePy is a 2D Python game built with Pygame, inspired by the classic Snake formula. It combines movement, collision, item collection, and a hazard element represented by the bomb, resulting in a lightweight and engaging project.
 
 ## Highlights
 
